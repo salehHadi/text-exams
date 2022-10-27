@@ -1,13 +1,126 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --font-color: #293264;
+  --qustion-font: 'Karla', sans-serif;
+  --btn-font: 'Inter', sans-serif;
+  --qestion-weight: 700;
+
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: var(--qustion-font);
+  color: var(--font-color);
+  padding: 8% 12%;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.btn { 
+  background-color: var(--font-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: .8;
+}
+
+
+
+
+.intro__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__title{
+  margin: 0;
+}
+
+.intro__btn {
+  padding: 10px 15px;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+.question__container {
+  border-bottom: .5px solid #2964362d;
+  padding-bottom: 20px;
+}
+
+.question__container:last-child{
+  border-bottom: none
+}
+
+.answers-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start ;
+}
+
+
+.answers__btn {
+  margin: 0;
+  padding: 3px 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--font-color);
+  border-radius: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.answers__btn:hover,
+.answers__btn:focus {
+  background-color: #D6DBF5;
+  transform: scale(1.1);
+}
+.answers__btn:active{
+  background-color: #64292942;
+}
+.answers__btn_presses {
+  background-color: #D6DBF5;
+  border: none;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+
+
+.submit__container {
+  margin: 30px 0 ;
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  justify-content: center;
+}
+.submit__btn {
+  padding: 5px 7px;
+  margin-left: 15px;
 }
